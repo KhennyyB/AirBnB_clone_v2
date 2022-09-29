@@ -40,6 +40,11 @@ exec {'create index.html':
   provider => shell,
 }
 
+exec { 'remove-current':
+  command  => 'rm -rf /data/web_static/current',
+  provider => shell,
+}
+
 # change owner of folder /date recursively
 exec {'chown-data':
   command  => 'sudo chown -hR ubuntu:ubuntu /data; sudo chown -hR ubuntu:ubuntu /data/web_static/',
