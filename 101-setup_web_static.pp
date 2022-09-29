@@ -11,10 +11,10 @@ exec {'install nginx':
 }
 
 # allow HTTP in Nginx
-# exec {'allow HTTP':
-#  command  => "sudo ufw allow 'Nginx HTTP'",
-#  provider => shell,
-# }
+exec {'allow HTTP':
+  command  => "sudo ufw allow 'Nginx HTTP'",
+  provider => shell,
+}
 
 # create the path /data/web_static/releases/test/
 exec {'mkdir /test':
