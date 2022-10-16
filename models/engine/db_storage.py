@@ -1,6 +1,8 @@
 #!/usr/bin/python3
 '''database storage engine'''
 
+import os
+import urllib.parse
 from sqlalchemy import create_engine
 from sqlalchemy.orm import sessionmaker, scoped_session
 from models.amenity import Amenity
