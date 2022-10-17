@@ -1,6 +1,7 @@
 #!/usr/bin/python3
 """This module instantiates an object of class FileStorage"""
 from os import getenv
+from models import storage
 from models.city import City
 from models.review import Review
 from models.place import Place
