@@ -3,7 +3,7 @@
 from sqlalchemy.sql.schema import ForeignKey
 from models.base_model import BaseModel, Base
 from sqlalchemy import Column, String, ForeignKey
-from models import storage_type
+from models import storage
 
 
 class Review(BaseModel, Base):
