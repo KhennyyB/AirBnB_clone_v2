@@ -4,7 +4,7 @@
 from models.amenity import Amenity
 from models.review import Review
 from models.base_model import BaseModel, Base
-from models import storage_type
+from models import storage
 from sqlalchemy import Column, String, Integer, Float, ForeignKey
 from sqlalchemy.sql.schema import Table
 from sqlalchemy.orm import relationship
