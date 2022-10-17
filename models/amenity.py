@@ -8,7 +8,6 @@ from sqlalchemy import Column, String
 class Amenity(BaseModel, Base):
     '''amenity class'''
     __tablename__ = 'amenities'
-    if storage == 'db':
         name = Column(String(128), nullable=False)
     else:
         name = ""
