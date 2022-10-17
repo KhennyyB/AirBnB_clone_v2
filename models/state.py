@@ -17,8 +17,7 @@ class State(BaseModel, Base):
     def cities(self):
     '''returns the list of City instances with state_id
                 equals the current State.id
-                FileStorage relationship between State and City
-                '''
+                FileStorage relationship between State and City'''
             from models import storage
             related_cities = []
             cities = storage.all(City)
