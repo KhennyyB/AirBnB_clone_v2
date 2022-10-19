@@ -19,7 +19,7 @@ def states():
     States are sorted by name.
     """
     states = storage.all(State)
-    return render_template("9-states.html", state=states)
+    return render_template("7-states_list.html", state=states)
 
 
 @app.route("/states/<id>", strict_slashes=False)
