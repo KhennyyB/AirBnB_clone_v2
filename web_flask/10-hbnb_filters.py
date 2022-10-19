@@ -7,6 +7,8 @@ Routes:
 from models import storage
 from flask import Flask
 from flask import render_template
+from models.state import State
+
 
 app = Flask(__name__)
 
@@ -14,8 +16,8 @@ app = Flask(__name__)
 @app.route("/hbnb_filters", strict_slashes=False)
 def hbnb_filters():
     """Displays the main HBnB filters HTML page."""
-    states = storage.all("State")
-    amenities = storage.all("Amenity")
+    states = storage.all(State)
+    amenities = storage.all(Amenity)
     return render_template("10-hbnb_filters.html",
                            states=states, amenities=amenities)
 
