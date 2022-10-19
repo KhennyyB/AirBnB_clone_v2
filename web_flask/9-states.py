@@ -18,8 +18,8 @@ def states():
     """Displays an HTML page with a list of all States.
     States are sorted by name.
     """
-    states = storage.all(State).values()
-    return render_template("7-states_list.html", state=states)
+    states = storage.all(State)
+    return render_template("9-states.html", state=states)
 
 
 @app.route("/states/<id>", strict_slashes=False)
